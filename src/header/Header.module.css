@@ -1,0 +1,77 @@
+.header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid var(--gray-200);
+    z-index: 1;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    color: var(--gray-900);
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    transition: opacity 0.2s;
+}
+
+.brand:hover {
+    opacity: 0.8;
+}
+
+.firstName {
+    color: var(--black);
+    font-weight: 800;
+}
+
+.lastName {
+    color: var(--gray-700);
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.navLinkCta {
+    background: var(--gray-900);
+    text-decoration: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.navLinkCta:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .brand {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .navLinkCta {
+        font-size: 12px;
+        padding: 0.2rem 0.4rem;
+    }
+}
