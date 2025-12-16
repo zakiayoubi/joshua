@@ -3,16 +3,32 @@ name: Build and Push Docker Image
 on:
   push:
     branches: [main]
+    tags:
+      - 'v*.*.*'
   pull_request:
     branches: [main]
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # needed to detect tags properly
+
+      - name: Generate version tag
+        id: version
+        run: |
+          if [[ $GITHUB_REF == refs/tags/v* ]]; then
+            echo "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          else
+            echo "version=latest" >> $GITHUB_OUTPUT
+          fi
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -23,13 +39,24 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN}}
+
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/joshua-portfolio:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/joshua-portfolio:latest
-          cche-to: type=inline
+          tags: |
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{steps.version.outputs.version }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/joshua-portfolio:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/joshua-portfolio:${{ steps.version.outputs.version }}
+          cache-from: type=registry,ref=ghcr.io/${{ github.repository }}:latest
+          cache-to: type=inline
       
 
