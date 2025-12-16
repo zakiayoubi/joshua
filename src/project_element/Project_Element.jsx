@@ -49,7 +49,7 @@ export default function Project_Element(props) {
 
                 <div className={styles.screen}>
                     <iframe
-                        src={`${props.pdfUrl}#zoom=page-width&scrollbar=1&toolbar=0&navpanes=0&pagemode=none`}
+                        src={`${props.pdfUrl}#view=FitH&zoom=page-width&toolbar=0&navpanes=0`}
                         title="Project PDF"
                         className={styles.pdfIframe}
                     />
