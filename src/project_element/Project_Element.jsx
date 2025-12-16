@@ -49,9 +49,9 @@ export default function Project_Element(props) {
 
                 <div className={styles.screen}>
                     <iframe
-                        src={props.pdfUrl}
+                        src="https://drive.google.com/file/d/122h1lo0aWLS7G-0jbL8Xc6WNlXqVZn3x/preview"
                         title="Project PDF"
-                        className={styles.pdfIframe}
+                        allow="autoplay"
                         style={{
                             border: 'none',
                             width: '100%',
