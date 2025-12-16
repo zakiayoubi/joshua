@@ -48,12 +48,11 @@ export default function Project_Element(props) {
                 </div>
 
                 <div className={styles.screen}>
-                    <embed
-                        src={`${props.pdfUrl}#zoom=page-width&toolbar=0`}
-                        type="application/pdf"
+                    <iframe
+                        src={`${props.pdfUrl}#view=FitB&scrollbar=1&toolbar=0&navpanes=0&pagemode=none`}
+                        title="Project PDF"
                         className={styles.pdfIframe}
                     />
-
                 </div>
             </div>
         </div>
