@@ -1,0 +1,7 @@
+*.mp4
+*.mov
+*.avi
+node_modules
+dist
+.git
+.env.local

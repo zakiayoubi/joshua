@@ -16,7 +16,6 @@ function About() {
         
 
         const accessKey = import.meta.env.VITE_FORM_ACCESS_KEY;
-        console.log(accessKey)
 
         const formData = new FormData();
         formData.append('name', name)
@@ -59,7 +58,7 @@ function About() {
 
                 {/* ABOUT */}
                 <section id="intro" className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Who is Joshua?</h2>
+                    <h2 className={styles.sectionTitle}>Bio?</h2>
                     <div className={styles.about}>
                         <img src="joshua.jpeg" alt="Joshua Badillo" className={styles.photo} />
                         <div className={styles.bio}>
