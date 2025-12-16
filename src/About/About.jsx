@@ -5,7 +5,6 @@ import {useState} from "react"
 
 function About() {
     const [status, setStatus] = useState('')
-    const [message, setMessage] = useState('')
 
     const handleSubmit = async (e) => {
         e.preventDefault(); 
@@ -64,7 +63,7 @@ function About() {
 
                 {/* ABOUT */}
                 <section id="intro" className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Bio?</h2>
+                    <h2 className={styles.sectionTitle}>Bio</h2>
                     <div className={styles.about}>
                         <img src="joshua.jpeg" alt="Joshua Badillo" className={styles.photo} />
                         <div className={styles.bio}>
