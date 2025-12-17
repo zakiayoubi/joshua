@@ -27,7 +27,7 @@ export default function Project_Element(props) {
                 </div>
 
                 {/* SCREEN 2 – Hidden until you click */}
-                <div className={styles.screen}>
+                {/* <div className={styles.screen}>
                     <video
                     controls
                     autoPlay                  // ← Starts playing automatically
@@ -38,6 +38,13 @@ export default function Project_Element(props) {
                         <source src={`${props.video}`} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
+                </div> */}
+                <div className={styles.screen}>
+                    <iframe className={styles.pdfIframe}
+                        src={`https://drive.google.com/file/d/${props.videoID}/preview`}
+                        title="Project Video"
+                        allow="autoplay"
+                    />
                 </div>
 
                 <div className={styles.screen}>

@@ -20,9 +20,9 @@ function Project () {
                 <Project_Element
                     name={"Mars Base"}
                     year={"2025"}
-                    video={"./capstone/capstone_video.mp4"}
+                    videoID={"1ybqh6kyv3v-DNANuFf1G3WcMhL1zA69o"}
                     thumbnail={"./capstone/capstone_cover.png"}
-                    pdfID={"1JAoXOk1IwFiCBj7h-h3jUltVm9lxzV7I"}
+                    pdfID={"122h1lo0aWLS7G-0jbL8Xc6WNlXqVZn3x"}
                 />
                 
                 {/* Audubon */}
@@ -30,8 +30,8 @@ function Project () {
                     name={"Audubon Center"}
                     year={"2025"}
                     thumbnail={"./audubon/audubon_thumbnail.png"}
-                    video={"./audubon/Part1_Audubon_Center_Flyover.mp4"}
-                    pdfID={"122h1lo0aWLS7G-0jbL8Xc6WNlXqVZn3x"}
+                    videoID={"13leGSkpVuTMLIFHfFIHQx1NcqBQ68dg-"}
+                    pdfID={"1JAoXOk1IwFiCBj7h-h3jUltVm9lxzV7I"}
                 />
 
                 {/* Powerhouse */}

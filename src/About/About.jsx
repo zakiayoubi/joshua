@@ -15,13 +15,7 @@ function About() {
         
 
         const accessKey = import.meta.env.VITE_FORM_ACCESS_KEY;
-        console.log("Render Access Key:", accessKey || "MISSING!");
-        console.log("Form payload preview:", {
-            name: e.target.name.value,
-            email: e.target.email.value,
-            message: e.target.message.value,
-            access_key: accessKey
-        });
+
         const formData = new FormData();
         formData.append('name', name)
         formData.append('email', email)
