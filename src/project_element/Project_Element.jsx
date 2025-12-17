@@ -27,18 +27,6 @@ export default function Project_Element(props) {
                 </div>
 
                 {/* SCREEN 2 – Hidden until you click */}
-                {/* <div className={styles.screen}>
-                    <video
-                    controls
-                    autoPlay                  // ← Starts playing automatically
-                    muted                     // ← Required for autoplay in most browsers
-                    loop                      // ← Optional: restarts when finished (nice for flyovers)
-                    playsInline
-                    >
-                        <source src={`${props.video}`} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div> */}
                 <div className={styles.screen}>
                     <iframe className={styles.pdfIframe}
                         src={`https://drive.google.com/file/d/${props.videoID}/preview`}
