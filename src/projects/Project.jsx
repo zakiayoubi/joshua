@@ -22,7 +22,7 @@ function Project () {
                     year={"2025"}
                     video={"./capstone/capstone_video.mp4"}
                     thumbnail={"./capstone/capstone_cover.png"}
-                    pdfUrl={"./capstone/capstone_pdf.pdf"}
+                    pdfID={"1JAoXOk1IwFiCBj7h-h3jUltVm9lxzV7I"}
                 />
                 
                 {/* Audubon */}
@@ -31,7 +31,7 @@ function Project () {
                     year={"2025"}
                     thumbnail={"./audubon/audubon_thumbnail.png"}
                     video={"./audubon/Part1_Audubon_Center_Flyover.mp4"}
-                    pdfUrl={"./audubon/audubon_pdf.pdf"}
+                    pdfID={"122h1lo0aWLS7G-0jbL8Xc6WNlXqVZn3x"}
                 />
 
                 {/* Powerhouse */}
@@ -39,7 +39,7 @@ function Project () {
                 name={"PowerHouse"}
                 year={"2024"}
                 thumbnail={"./powerhouse/powerhouse_cover.JPG"}
-                pdfUrl={"./powerhouse/powerhouse_pdf.pdf"}
+                pdfID={"1V_3fnn-_yB-Rru_CtNtohnkdoUwt0zfS"}
                 />
 
                 {/* Commercial */}
@@ -47,7 +47,7 @@ function Project () {
                     name={"Commercial"}
                     year={"2024"}
                     thumbnail={"./commercial/commercial_cover.png"}
-                    pdfUrl={"./commercial/commercial_pdf.pdf"}
+                    pdfID={"1fGbxOC_daKR5yfigVy2roerEOZaFs5r7"}
                 />
 
                 {/* Multifamily */}
@@ -55,7 +55,7 @@ function Project () {
                 name={"Multifamily"}
                 year={"2023"}
                 thumbnail={"./multifamily/multifamily_cover.png"}
-                pdfUrl={"./multifamily/multifamily_pdf.pdf"}
+                pdfID={"1DePfeiQVK_fE0quoWGCN-7UAj1dgrJmK"}
                 />
             </main>
             <Footer />

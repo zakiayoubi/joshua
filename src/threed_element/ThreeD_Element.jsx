@@ -42,11 +42,13 @@ export default function ThreeD_Element(props) {
                 </div>
 
                 <div className={styles.screen}>
-                    <iframe
-                        src={`${props.pdfUrl}#view=FitH&zoom=85&scrollbar=1&toolbar=0&navpanes=0&pagemode=none`}
-                        title="Project PDF"
-                        className={styles.pdfIframe}
-                    />
+                    <div className={styles.screen}>
+                        <iframe className={styles.pdfIframe}
+                            src={`https://drive.google.com/file/d/${props.pdfID}/preview`}
+                            title="Project PDF"
+                            allow="autoplay"
+                        />
+                    </div>
                 </div>
             </div>
         </div>

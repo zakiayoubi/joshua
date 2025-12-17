@@ -11,19 +11,12 @@ export default function Project_Element(props) {
         setOpen(!open)
     }
 
-    const handleMouseLeave = () => {
-        if (window.innerWidth <= 768) {
-            return;
-        }
-        setOpen(false);
-    };
-
     return (
         <div
             className={`${styles.card} ${open ? styles.open : ""}`}
             onClick={handleClick}
         >
-            <div onMouseLeave={handleMouseLeave} className={styles.slider}>
+            <div className={styles.slider}>
                 {/* SCREEN 1 – Only this is visible when small */}
                 <div className={styles.screen}>
                     <img src={`${props.thumbnail}`} alt="thumb" />
@@ -48,15 +41,10 @@ export default function Project_Element(props) {
                 </div>
 
                 <div className={styles.screen}>
-                    <iframe
-                        src="https://drive.google.com/file/d/122h1lo0aWLS7G-0jbL8Xc6WNlXqVZn3x/preview"
+                    <iframe className={styles.pdfIframe}
+                        src={`https://drive.google.com/file/d/${props.pdfID}/preview`}
                         title="Project PDF"
                         allow="autoplay"
-                        style={{
-                            border: 'none',
-                            width: '100%',
-                            height: '100%',
-                        }}
                     />
                 </div>
             </div>
