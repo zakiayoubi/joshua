@@ -3,6 +3,7 @@ import Footer from "../footer/Footer"
 import styles from "./Project.module.css"
 import Project_Element from "../project_element/Project_Element"
 import ThreeD_Element from "../threed_element/ThreeD_Element"
+import CustomElement from "../customElement/CustomElement"
 function Project () {
 
     function handleClick() {
@@ -43,7 +44,7 @@ function Project () {
                 />
 
                 {/* Commercial */}
-                <Project_Element
+                <CustomElement
                     name={"Commercial"}
                     year={"2024"}
                     thumbnail={"./commercial/commercial_cover.png"}
@@ -51,7 +52,7 @@ function Project () {
                 />
 
                 {/* Multifamily */}
-                <Project_Element
+                <CustomElement
                 name={"Multifamily"}
                 year={"2023"}
                 thumbnail={"./multifamily/multifamily_cover.png"}
