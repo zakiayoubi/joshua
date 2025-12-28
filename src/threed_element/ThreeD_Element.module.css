@@ -28,7 +28,7 @@
     margin-bottom: 2rem;
     transition: all 0.3 ease-in;
     gap: 1rem;
-    
+
 }
 
 /* Each screen (base) */
@@ -38,7 +38,6 @@
     width: 100%;
     aspect-ratio: 7 / 5;
     height: auto;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,10 +45,9 @@
 }
 
 .screen img,
-.screen video,
 .screen iframe {
     width: 100%;
-    height: 91%;
+    height: 85%;
     object-fit: cover;
 }
 
@@ -62,7 +60,10 @@
 
 .open .slider {
     position: absolute;
+    display: flex;
+    justify-content: start;
     width: 100vw;
+    height: 100%;
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: none;
@@ -91,7 +92,7 @@
 
 .pdfIframe {
     width: 100%;
-    height: 80%;
+    height: 70%;
     border: none;
     background: white;
     overflow: hidden;
@@ -108,7 +109,7 @@
         margin: 0 auto;
         margin-bottom: .5rem;
     }
-    
+
     .open {
         height: 410px;
     }
@@ -121,10 +122,11 @@
         max-width: 500px;
         width: 100%;
     }
+
     .screen img,
     .screen iframe {
         padding-bottom: .5rem;
-        }
+    }
 
     .open .screen img,
     .open .screen iframe {
@@ -134,15 +136,15 @@
 
 }
 
-/* ==================== MOBILE: DISABLE .open EXPANSION ==================== */
 @media (max-width: 768px) {
     .card {
         margin: 0 auto;
-        padding: 0 1rem;
         max-width: 380px;
         width: 100%;
-        height: 310px;
-        }
+        height: 300px;
+        margin-bottom: 0.4rem;
+    }
+
 
     .slider {
         gap: 1rem;
@@ -154,18 +156,43 @@
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
+        padding: 0 1rem;
     }
 
-    .screen {
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
+    .open .slider {
+        padding: 0 1rem;
+    }
+
+
+
+    .open .screen {
+        animation: slideHint 3s ease-in-out forwards;
+    }
+
+    @keyframes slideHint {
+
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        20%,
+        60% {
+            transform: translateX(-20%);
+        }
+    }
+
+    .screen,
+    .open .screen {
+        aspect-ratio: 7 / 5;
+        margin: 0;
     }
 
     .screen img,
-    .screen iframe {
-        width: 100%;
-        height: 85%;
+    .screen iframe,
+    .open .screen image,
+    .open .screen iframe {
+        aspect-ratio: 7 / 5;
         object-fit: cover;
     }
 

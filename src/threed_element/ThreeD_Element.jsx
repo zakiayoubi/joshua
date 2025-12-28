@@ -5,9 +5,6 @@ export default function ThreeD_Element(props) {
     const [open, setOpen] = useState(false);
 
     function handleClick() {
-        if (window.innerWidth <= 768) {
-            return; // Do nothing on mobile
-        }
         setOpen(!open)
     }
 
