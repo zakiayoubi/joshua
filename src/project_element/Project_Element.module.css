@@ -159,6 +159,10 @@
         padding: 0 1rem;
     }
 
+    .screen {
+        width: 100%;
+    }
+
     .open .slider {
         padding: 0 1rem;
     }
