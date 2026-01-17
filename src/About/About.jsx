@@ -60,7 +60,7 @@ function About() {
                 <section id="intro" className={styles.section}>
                     <h2 className={styles.sectionTitle}>Bio</h2>
                     <div className={styles.about}>
-                        <img src="joshua.jpeg" alt="Joshua Badillo" className={styles.photo} />
+                        <img src="josh.jpeg" alt="Joshua Badillo" className={styles.photo} />
                         <div className={styles.bio}>
                             <p>{bioText}</p>
                             <a href="#contact" className={styles.ctaButton}>Get in Touch</a>
