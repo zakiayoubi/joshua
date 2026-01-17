@@ -2,6 +2,7 @@ import styles from "./About.module.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import {useState} from "react"
+import bioText from './bioText.txt?raw'
 
 function About() {
     const [status, setStatus] = useState('')
@@ -51,7 +52,7 @@ function About() {
                 <section id="hero" className={styles.hero}>
                     <h1 className={styles.name}>Joshua Badillo Arciniega</h1>
                     <p className={styles.tagline}>
-                        Detail-Oriented CAD & BIM Technician | Bridging Design, Constructability, and Innovation
+                        CAD & BIM Technician | Bridging Design, Constructability, and Innovation
                     </p>
                 </section>
 
@@ -61,16 +62,7 @@ function About() {
                     <div className={styles.about}>
                         <img src="joshua.jpeg" alt="Joshua Badillo" className={styles.photo} />
                         <div className={styles.bio}>
-                            <p>
-                                Detail-oriented, ethically driven CAD & BIM Technician specializing
-                                in both architectural drafting and civil/structural detailing, with
-                                a CAD & BIM Technician Diploma from Vancouver Community College
-                                (Architectural Technician + Civil/Structural Technician specialties). 
-                                I graduated with high distinction (4.24 GPA) and received the Stan Phipps 
-                                Scholarship, reflecting strong technical fundamentals and consistent performance. 
-                                I'm focused on producing accurate, buildable, and coordinated design documentation 
-                                that supports sustainable, human-centered environments and strong team collaboration.​
-                            </p>
+                            <p>{bioText}</p>
                             <a href="#contact" className={styles.ctaButton}>Get in Touch</a>
                         </div>
                     </div>
